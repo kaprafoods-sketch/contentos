@@ -1,0 +1,87 @@
+1
+00:00:00,150 --> 00:00:02,030
+AI motion design just changed.
+
+2
+00:00:02,070 --> 00:00:02,990
+Here's the catch.
+
+3
+00:00:03,152 --> 00:00:03,932
+A year ago? Fair.
+
+4
+00:00:03,972 --> 00:00:05,552
+Warped clips. Melting text.
+
+5
+00:00:05,592 --> 00:00:07,552
+Your afternoon, gone in After Effects.
+
+6
+00:00:07,789 --> 00:00:09,569
+Then Opus 5.5 dropped.
+
+7
+00:00:09,609 --> 00:00:11,769
+People asked Claude Code for a showreel.
+
+8
+00:00:11,809 --> 00:00:12,669
+One line.
+
+9
+00:00:12,799 --> 00:00:15,699
+"Make a dynamic 15-second motion graphics video.
+
+10
+00:00:15,739 --> 00:00:16,679
+Go all out."
+
+11
+00:00:16,973 --> 00:00:18,783
+And got this. Kinetic type.
+
+12
+00:00:18,823 --> 00:00:20,203
+Particle reveals.
+
+13
+00:00:21,008 --> 00:00:21,548
+Even the sound.
+
+14
+00:00:21,588 --> 00:00:23,608
+Written in code, synced to every cut.
+
+15
+00:00:24,234 --> 00:00:25,454
+And not just one look.
+
+16
+00:00:26,317 --> 00:00:27,737
+But plenty weren't one line.
+
+17
+00:00:27,777 --> 00:00:31,697
+One viral one-shot had a 10,000 character prompt behind it.
+
+18
+00:00:31,737 --> 00:00:33,697
+Skills. Examples. A proper brief.
+
+19
+00:00:33,737 --> 00:00:35,297
+The gap is shrinking fast.
+
+20
+00:00:35,337 --> 00:00:36,437
+Taste still wins.
+
+21
+00:00:36,883 --> 00:00:37,723
+Want my prompts?
+
+22
+00:00:37,763 --> 00:00:39,943
+Comment PROMPTS and I'll send you the library.

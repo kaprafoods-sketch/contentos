@@ -1,0 +1,3 @@
+build/*
+!build/sec_*.wav
+!build/sec_words.json
