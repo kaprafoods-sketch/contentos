@@ -37,8 +37,8 @@ const COPY = {
   trust: '200+ homes delivered in Noida since 2017.',
   call: 'Call or WhatsApp',
   phone: '+91 70602 00814',
-  reraSite: 'www.up-rera.in',
-  qr: 'Project QR code',
+  freehold: 'Freehold property.',
+  iphone: 'iPhone 17 Pro at every booking.',
   dev: 'Developer: Infra Kraft Homes Private Limited.',
   mkt: 'Marketed by Legacy Estate Private Limited.',
   disclaimer: 'Artist impression. Areas are super built up and subject to the final sanctioned plan. Carpet area is super area less 8%. Prices are basic sale price at ₹6,999 per sq ft of super area; parking, PLC, power backup, GST, stamp duty and registration are extra. Travel times are indicative. Not an offer; the agreement for sale governs.',
@@ -385,15 +385,12 @@ function endCard(sc, o) {
   const c2 = document.createElement('span'); c2.textContent = COPY.phone; Object.assign(c2.style, { fontSize: o.phoneSize + 'px', fontWeight: 800, color: C.lit, lineHeight: 1.1, letterSpacing: '-0.01em' });
   call.appendChild(c1); call.appendChild(c2); stage.appendChild(call);
   sc.add(call, at + 15, { out: null });
-  // compliance panel on paper
+  // offer panel: two facts on a Blue Hour card, Paper text, no yellow
   const pn = document.createElement('div');
-  Object.assign(pn.style, { position: 'absolute', left: o.pnX + 'px', top: o.pnY + 'px', width: o.pnW + 'px', height: o.pnH + 'px', background: C.paper, borderRadius: '10px', boxSizing: 'border-box', padding: `0 ${o.pnPad}px`, display: 'flex', alignItems: 'center', justifyContent: 'space-between', color: C.ink });
-  const tx = document.createElement('div');
-  tx.innerHTML = o.reraHTML;
-  const qr = document.createElement('div');
-  Object.assign(qr.style, { width: o.qr + 'px', height: o.qr + 'px', flex: 'none', border: `3px dashed ${C.slate}`, borderRadius: '10px', boxSizing: 'border-box', display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', fontSize: o.qrSize + 'px', fontWeight: 600, color: C.slate, lineHeight: 1.2, padding: '10px' });
-  qr.textContent = COPY.qr;
-  pn.appendChild(tx); pn.appendChild(qr); stage.appendChild(pn);
+  Object.assign(pn.style, { position: 'absolute', left: o.pnX + 'px', top: o.pnY + 'px', width: o.pnW + 'px', height: o.pnH + 'px', background: C.bh, borderRadius: '10px', boxSizing: 'border-box',
+    display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: o.pnGap + 'px', color: C.paper, whiteSpace: 'nowrap' });
+  [COPY.freehold, COPY.iphone].forEach(s => { const d = document.createElement('div'); d.textContent = s; Object.assign(d.style, { fontSize: o.pnSize + 'px', fontWeight: 700, lineHeight: 1.15 }); pn.appendChild(d); });
+  stage.appendChild(pn);
   sc.add(pn, at + 20, { out: null });
   const dv = text(stage, o.devOneLine ? COPY.dev + ' ' + COPY.mkt : COPY.dev, { y: o.devY, size: o.devSize, weight: 500, color: C.sky, align: 'center' });
   sc.add(dv, at + 25, { out: null });
@@ -403,7 +400,6 @@ function endCard(sc, o) {
   sc.on(() => { ds.style.top = (o.dsBottom - ds.offsetHeight) + 'px'; });
   sc.add(ds, at + 28, { out: null, dy: 20 });
 }
-const RERA_HTML = size => `<div style="font-size:${size}px;font-weight:800;line-height:1.3">${COPY.reraSite}</div>`;
 
 /* ================= FILM 16:9, 45 s ================= */
 let building, buildingState;
@@ -474,8 +470,7 @@ function film() {
   endCard(s8, {
     logoW: 440, logoY: 64, hiY: 150, hiSize: 80, trustY: 286, trustSize: 38,
     callY: 352, callSize: 42, phoneSize: 64, callStack: false,
-    pnX: 380, pnY: 470, pnW: 1160, pnH: 200, pnPad: 52, qr: 150, qrSize: 20,
-    reraHTML: RERA_HTML(48),
+    pnX: 460, pnY: 470, pnW: 1000, pnH: 190, pnGap: 14, pnSize: 52,
     devY: 712, devSize: 28, devOneLine: true,
     dsX: 130, dsSize: 25, dsAlign: 'center', dsBottom: 1046,
   });
@@ -587,8 +582,7 @@ function reelEndOpts() {
   return {
     logoW: 560, logoY: 270, hiY: 372, hiSize: 92, trustY: 520, trustSize: 40,
     callY: 598, callSize: 44, phoneSize: 84, callStack: true,
-    pnX: 60, pnY: 780, pnW: 960, pnH: 240, pnPad: 44, qr: 176, qrSize: 22,
-    reraHTML: RERA_HTML(48),
+    pnX: 60, pnY: 790, pnW: 960, pnH: 210, pnGap: 16, pnSize: 52,
     devY: 1052, devSize: 30, devOneLine: false,
     dsX: 64, dsSize: 27, dsAlign: 'left', dsBottom: 1556,
   };

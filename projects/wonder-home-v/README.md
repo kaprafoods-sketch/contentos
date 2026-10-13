@@ -22,6 +22,7 @@ Rebuild everything: `./render_all.sh` (needs Node 22, Playwright Chromium, ffmpe
 
 To change copy, edit `COPY` in `wh.js`, run `node check.js`, then `./render_all.sh`.
 
-## Placeholders to replace before release
+## Client instructions
 
-- Project QR code (dashed box on the end card)
+- No UP RERA mention anywhere (no registration number, no up-rera.in, no RERA QR). Client instruction, 13 Oct 2026. `check.js` fails the build if "RERA" appears on screen.
+- End card carries: Freehold property. iPhone 17 Pro at every booking.
