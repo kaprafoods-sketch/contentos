@@ -1,0 +1,95 @@
+1
+00:00:00,240 --> 00:00:02,931
+This AI model can't write a single sentence.
+
+2
+00:00:02,971 --> 00:00:06,021
+And that's exactly why you need it.
+
+3
+00:00:06,125 --> 00:00:09,560
+Most of what your AI does all day is tiny decisions.
+
+4
+00:00:09,663 --> 00:00:11,925
+Yes or no. Warm or cold.
+
+5
+00:00:12,029 --> 00:00:14,329
+And you're paying Opus prices for them.
+
+6
+00:00:14,433 --> 00:00:17,040
+It's called Jev, from TypeSafe AI.
+
+7
+00:00:17,144 --> 00:00:19,752
+About 4 cents per million input tokens.
+
+8
+00:00:19,856 --> 00:00:21,079
+Output is free.
+
+9
+00:00:21,452 --> 00:00:23,021
+Four ways to use it.
+
+10
+00:00:23,298 --> 00:00:24,470
+One. Route first.
+
+11
+00:00:24,510 --> 00:00:28,489
+Jev Router picks the model and the reasoning effort for every request.
+
+12
+00:00:28,529 --> 00:00:30,983
+And it's live on OpenRouter.
+
+13
+00:00:31,260 --> 00:00:32,348
+Two. Triage.
+
+14
+00:00:32,452 --> 00:00:34,329
+Send it a hundred lead emails.
+
+15
+00:00:34,433 --> 00:00:37,598
+It tags each one warm, cold or not a lead.
+
+16
+00:00:37,702 --> 00:00:39,579
+Claude only writes the warm replies.
+
+17
+00:00:39,952 --> 00:00:41,329
+Three. Score.
+
+18
+00:00:41,433 --> 00:00:42,540
+Give it a rubric.
+
+19
+00:00:42,644 --> 00:00:46,271
+It scores every ticket and tells you how confident it is.
+
+20
+00:00:46,500 --> 00:00:48,204
+Four. Guardrails.
+
+21
+00:00:48,308 --> 00:00:51,069
+One true or false check before anything ships.
+
+22
+00:00:51,404 --> 00:00:54,185
+Claude does the thinking. Jev makes the calls.
+
+23
+00:00:54,288 --> 00:00:57,608
+It's early access, so test it on your own workflow first.
+
+24
+00:00:57,712 --> 00:00:59,781
+Comment JEV and I'll DM you the links.

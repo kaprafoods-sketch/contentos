@@ -1,0 +1,3 @@
+Barlow Condensed, Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
+Licensed under the SIL Open Font License, Version 1.1 (https://openfontlicense.org).
+Latin subset (U+0000-00FF and punctuation) downloaded from Google Fonts, 13 Oct 2026.
