@@ -1,0 +1,87 @@
+1
+00:00:00,400 --> 00:00:03,630
+Glass on the web has always looked a little fake.
+
+2
+00:00:03,880 --> 00:00:06,070
+A blur, a border, done.
+
+3
+00:00:06,730 --> 00:00:08,400
+liquidGL makes it real.
+
+4
+00:00:08,830 --> 00:00:11,620
+Glass that actually bends what's behind it.
+
+5
+00:00:12,730 --> 00:00:17,020
+The catch? Browsers won't let the GPU read live screen pixels.
+
+6
+00:00:17,070 --> 00:00:18,440
+It's a security rule.
+
+7
+00:00:20,230 --> 00:00:24,240
+So liquidGL takes its own high resolution snapshot of the page,
+
+8
+00:00:24,290 --> 00:00:26,620
+hands it to a shader, and bends it.
+
+9
+00:00:26,950 --> 00:00:29,300
+Strongest at the edges, like a real bevel.
+
+10
+00:00:31,230 --> 00:00:32,680
+You control the look.
+
+11
+00:00:33,030 --> 00:00:35,560
+Refraction. Bevel. Frost.
+
+12
+00:00:35,890 --> 00:00:38,120
+Moving highlights. Soft shadows.
+
+13
+00:00:39,180 --> 00:00:41,070
+Version three adds tinted glass,
+
+14
+00:00:41,240 --> 00:00:43,050
+true colour dispersion at the edges,
+
+15
+00:00:43,100 --> 00:00:45,650
+and a fluid surface that follows your finger.
+
+16
+00:00:48,730 --> 00:00:51,640
+Run as many lenses as you like. Stack them.
+
+17
+00:00:51,690 --> 00:00:54,240
+They all draw through one shared canvas.
+
+18
+00:00:55,730 --> 00:00:56,940
+It renders with WebGPU,
+
+19
+00:00:56,990 --> 00:01:01,160
+and falls back to WebGL, then CSS, automatically.
+
+20
+00:01:02,230 --> 00:01:05,280
+Install it. Point it at an element. That's it.
+
+21
+00:01:08,027 --> 00:01:11,463
+liquidGL. Open source, MIT licensed.
+
+22
+00:01:11,825 --> 00:01:15,000
+Try the demos at liquidgl.naughtyduk.com
