@@ -37,8 +37,6 @@ const COPY = {
   trust: '200+ homes delivered in Noida since 2017.',
   call: 'Call or WhatsApp',
   phone: '+91 70602 00814',
-  reraLabel: 'UP RERA registration no.',
-  reraNo: 'UPRERAPRJ000000',
   reraSite: 'www.up-rera.in',
   qr: 'Project QR code',
   dev: 'Developer: Infra Kraft Homes Private Limited.',
@@ -172,7 +170,8 @@ function Building(o) {
   b.apply = s => {
     svg.style.opacity = s.op;
     svg.style.visibility = s.op < 0.002 ? 'hidden' : 'visible';
-    b.ground.setAttribute('opacity', s.ground);
+    const g = s.gIndep ? s.ground : s.ground * s.op; // film: ground leaves with the building
+    b.ground.setAttribute('opacity', g);
     b.ground.style.transform = `translateY(${(1 - s.ground) * 30}px)`;
     b.pillars.forEach((p, i) => {
       const h = groundH * s.pillars;
@@ -404,9 +403,7 @@ function endCard(sc, o) {
   sc.on(() => { ds.style.top = (o.dsBottom - ds.offsetHeight) + 'px'; });
   sc.add(ds, at + 28, { out: null, dy: 20 });
 }
-const RERA_HTML = (s1, s2, s3, stack) => stack
-  ? `<div style="font-size:${s1}px;font-weight:700;line-height:1.25">${COPY.reraLabel}</div><div style="font-size:${s2}px;font-weight:800;line-height:1.25">${COPY.reraNo}</div><div style="font-size:${s3}px;font-weight:700;line-height:1.35">${COPY.reraSite}</div>`
-  : `<div style="font-size:${s1}px;font-weight:800;line-height:1.3">${COPY.reraLabel} ${COPY.reraNo}</div><div style="font-size:${s3}px;font-weight:700;line-height:1.4">${COPY.reraSite}</div>`;
+const RERA_HTML = size => `<div style="font-size:${size}px;font-weight:800;line-height:1.3">${COPY.reraSite}</div>`;
 
 /* ================= FILM 16:9, 45 s ================= */
 let building, buildingState;
@@ -478,7 +475,7 @@ function film() {
     logoW: 440, logoY: 64, hiY: 150, hiSize: 80, trustY: 286, trustSize: 38,
     callY: 352, callSize: 42, phoneSize: 64, callStack: false,
     pnX: 380, pnY: 470, pnW: 1160, pnH: 200, pnPad: 52, qr: 150, qrSize: 20,
-    reraHTML: RERA_HTML(42, 0, 36, false),
+    reraHTML: RERA_HTML(48),
     devY: 712, devSize: 28, devOneLine: true,
     dsX: 130, dsSize: 25, dsAlign: 'center', dsBottom: 1046,
   });
@@ -581,6 +578,7 @@ function reel() {
   buildingState = f => {
     const s = g0(f);
     s.ground = f < 120 ? P(f, 0, 16) : 1 - P(f, 712, 12);
+    s.gIndep = true;
     return s;
   };
 }
@@ -590,7 +588,7 @@ function reelEndOpts() {
     logoW: 560, logoY: 270, hiY: 372, hiSize: 92, trustY: 520, trustSize: 40,
     callY: 598, callSize: 44, phoneSize: 84, callStack: true,
     pnX: 60, pnY: 780, pnW: 960, pnH: 240, pnPad: 44, qr: 176, qrSize: 22,
-    reraHTML: RERA_HTML(36, 48, 36, true),
+    reraHTML: RERA_HTML(48),
     devY: 1052, devSize: 30, devOneLine: false,
     dsX: 64, dsSize: 27, dsAlign: 'left', dsBottom: 1556,
   };
@@ -642,6 +640,7 @@ function layoutReel() {
     s.op = 1 - P(f, 232, 10);
     const dim = P(f, 70, 12);
     const lit0 = s.lit; s.lit = (r, c) => lit0(r, c) * (1 - dim);
+    s.gIndep = true;
     return s;
   };
 }

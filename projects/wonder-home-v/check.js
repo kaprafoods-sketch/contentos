@@ -2,7 +2,7 @@
 const http = require('http'), fs = require('fs'), path = require('path');
 const { chromium } = require('playwright');
 const BRIEF_COMMON = ['Wonder Home V', 'Sector 101, Noida.', 'Opposite Bade Hanuman Ji Temple.', 'सही जगह, सही दाम।',
-  '200+ homes delivered in Noida since 2017.', 'Call or WhatsApp', '+91 70602 00814', 'UP RERA registration no.', 'UPRERAPRJ000000', 'www.up-rera.in',
+  '200+ homes delivered in Noida since 2017.', 'Call or WhatsApp', '+91 70602 00814', 'www.up-rera.in',
   'Developer: Infra Kraft Homes Private Limited.', 'Marketed by Legacy Estate Private Limited.',
   'Artist impression. Areas are super built up and subject to the final sanctioned plan. Carpet area is super area less 8%. Prices are basic sale price at ₹6,999 per sq ft of super area; parking, PLC, power backup, GST, stamp duty and registration are extra. Travel times are indicative. Not an offer; the agreement for sale governs.',
   'Metro, Medanta and two malls, each five minutes away.', 'Sector 101 metro', 'Medanta', 'Aditya Ancora Mall', 'Spectrum Mall', '5 min', 'Travel times by road, indicative.'];
@@ -16,7 +16,7 @@ const EXPECT = {
 };
 const LAY = [['2 BHK', '1,075 sq ft', '989 sq ft', '₹75.2 lakh'], ['2 BHK + Study', '1,175 sq ft', '1,081 sq ft', '₹82.2 lakh'], ['3 BHK', '1,410 sq ft', '1,297 sq ft', '₹98.7 lakh'],
   ['3 BHK', '1,570 sq ft', '1,444 sq ft', '₹1.1 crore'], ['3 BHK', '1,670 sq ft', '1,536 sq ft', '₹1.17 crore']];
-const BANNED = /affordable|cheap|budget|low cost|luxury|premium|world class|dream home|best location|limited offer|hurry|booking fast|all inclusive|pool|gym|clubhouse|park\b|garden|smart home|on time|!|—|–/i;
+const BANNED = /RERA registration|UPRERAPRJ|affordable|cheap|budget|low cost|luxury|premium|world class|dream home|best location|limited offer|hurry|booking fast|all inclusive|pool|gym|clubhouse|park\b|garden|smart home|on time|!|—|–/i;
 const root = __dirname;
 const TYPES = { '.html': 'text/html', '.js': 'text/javascript', '.svg': 'image/svg+xml', '.woff2': 'font/woff2' };
 const server = http.createServer((q, r) => { const f = path.join(root, q.url.split('?')[0]); fs.readFile(f, (e, d) => { r.writeHead(e ? 404 : 200, { 'Content-Type': TYPES[path.extname(f)] || 'application/octet-stream' }); r.end(d); }); }).listen(0, async () => {

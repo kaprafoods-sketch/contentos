@@ -20,9 +20,8 @@
 
 Rebuild everything: `./render_all.sh` (needs Node 22, Playwright Chromium, ffmpeg, Python with numpy and scipy).
 
-To change copy (for example the RERA number), edit `COPY` in `wh.js`, run `node check.js`, then `./render_all.sh`.
+To change copy, edit `COPY` in `wh.js`, run `node check.js`, then `./render_all.sh`.
 
 ## Placeholders to replace before release
 
-- UP RERA registration no. `UPRERAPRJ000000`
 - Project QR code (dashed box on the end card)
