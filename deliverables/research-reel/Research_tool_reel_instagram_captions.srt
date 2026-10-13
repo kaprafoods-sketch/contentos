@@ -1,0 +1,59 @@
+1
+00:00:00,120 --> 00:00:01,360
+Research tool.
+
+2
+00:00:03,250 --> 00:00:04,910
+Saving reels is easy.
+
+3
+00:00:05,110 --> 00:00:06,710
+Finding the good ones later?
+
+4
+00:00:06,870 --> 00:00:08,410
+Absolute chaos.
+
+5
+00:00:09,150 --> 00:00:11,970
+Share a reel, send it into your Claude Code workflow,
+
+6
+00:00:12,010 --> 00:00:13,510
+and analyze the content
+
+7
+00:00:13,550 --> 00:00:16,370
+instead of manually digging through everything.
+
+8
+00:00:17,200 --> 00:00:18,480
+Get the transcript.
+
+9
+00:00:18,520 --> 00:00:19,860
+Break down the hook.
+
+10
+00:00:19,940 --> 00:00:21,360
+Identify the format.
+
+11
+00:00:21,400 --> 00:00:23,580
+And organize the performance numbers.
+
+12
+00:00:26,250 --> 00:00:28,190
+Seventy-one reels analyzed.
+
+13
+00:00:28,330 --> 00:00:29,910
+Now you know what works.
+
+14
+00:00:34,350 --> 00:00:35,870
+Want the research workflow?
+
+15
+00:00:35,990 --> 00:00:38,230
+Comment RESEARCH and I'll send it over.

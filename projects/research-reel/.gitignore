@@ -1,0 +1,3 @@
+build/*
+!build/vo_a.mp3
+!build/vo_a_words.json
